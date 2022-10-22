@@ -14,7 +14,6 @@ class KthLargest:
             return self.nums[-self.k]
         
         if len(self.nums) > self.k and val < self.nums[-self.k]:
-            print('k')
             return self.nums[-self.k]
         else:
             for i in range(len(self.nums)):
