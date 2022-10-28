@@ -3,12 +3,12 @@ class Solution:
         if min(nums) > 1:
             return 1
         maxi = max(nums)
-        if maxi < 0:
+        if max(nums) < 0:
             return 1
-        if maxi > 100001:
+        if max(nums) > 100001:
             a = [-1]*100001
         else:
-            a = [-1]*(maxi+1)
+            a = [-1]*(max(nums)+1)
         a[0] = 0
         for i in range(len(nums)):
             if nums[i] > 0 and nums[i] < 100001:
