@@ -2,7 +2,6 @@ class Solution:
     def convert(self, s: str, numRows: int) -> str:
         s = list(s)
         a = []
-        ans = ''
         p = 0
         for i in range(numRows):
             a.append([])
@@ -21,7 +20,4 @@ class Solution:
                     break
             if p >= len(s):
                 break
-        for ele in a:
-            for ele1 in ele:
-                ans += ele1
-        return ans
+        return ''.join(x for sl in a for x in sl)
