@@ -1,23 +1,5 @@
 class Solution:
     def findBall(self, grid: List[List[int]]) -> List[int]:
-        check = False
-        # if len(grid[0])<=len(grid):
-        #     for i in range(len(grid)):
-        #         if grid[i][i] != 1:
-        #             check = False
-        #             break
-        #         else:
-        #             check = True
-        #     if check:
-        #         return [-1]*len(grid)
-        #     for i in range(len(grid)-1,-1,-1):
-        #         if grid[i][i] != -1:
-        #             check = False
-        #             break
-        #         else:
-        #             check = True
-        #     if check:
-        #         return [-1]*len(grid)
         q = 0
         ans = []
         for i in range(len(grid[0])):
@@ -44,5 +26,4 @@ class Solution:
                 if j == len(grid)-1:
                     ans.append(q)
                     break
-        print(ans)
         return ans
