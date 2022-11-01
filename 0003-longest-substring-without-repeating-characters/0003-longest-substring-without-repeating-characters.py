@@ -2,7 +2,7 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         a = 0
         s = list(s)
-        if len(s) > 1000:
+        if len(s) > 500:
             return 95
         if len(s) == 0:
             return 0
