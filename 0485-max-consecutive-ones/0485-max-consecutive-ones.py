@@ -9,8 +9,11 @@ class Solution:
                     pre = 0
                 else:
                     pre = 0
+                if maxi > len(nums)//2:
+                    return maxi
             else:
                 pre += 1
+            
         if maxi > pre:
             return maxi
         return pre
