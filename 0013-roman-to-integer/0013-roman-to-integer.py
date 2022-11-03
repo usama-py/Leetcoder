@@ -17,20 +17,28 @@ class Solution:
                     ans -= 100
                 else:
                     ans += 100
-        if s[len(s)-1] == 'I':
+            elif s[i] == 'M':
+                ans += 1000
+            elif s[i] == 'V':
+                ans += 5
+            elif s[i] == 'L':
+                ans += 50
+            else:
+                ans += 500
+        i = len(s)-1
+        if s[i] == 'I':
             ans += 1
-        elif s[len(s)-1] == 'X':
+        elif s[i] == 'X':
             ans += 10
-        elif s[len(s)-1] == 'C':
+        elif s[i] == 'C':
             ans += 100
-        a = Counter(s)
-        for k,v in a.items():
-            if k == 'V':
-                ans += 5*v
-            elif k == 'L':
-                ans += 50*v
-            elif k == 'D':
-                ans += 500*v
-            elif k == 'M':
-                ans += 1000*v
+        elif s[i] == 'M':
+                ans += 1000
+        elif s[i] == 'V':
+            ans += 5
+        elif s[i] == 'L':
+            ans += 50
+        else:
+            ans += 500
+        
         return ans
